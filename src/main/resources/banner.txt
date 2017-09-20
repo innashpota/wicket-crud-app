@@ -1,0 +1,21 @@
+
+
+
+UUUUUUUU     UUUUUUUU                                                                              DDDDDDDDDDDDD      BBBBBBBBBBBBBBBBB
+U::::::U     U::::::U                                                                              D::::::::::::DDD   B::::::::::::::::B
+U::::::U     U::::::U                                                                              D:::::::::::::::DD B::::::BBBBBB:::::B
+UU:::::U     U:::::UU                                                                              DDD:::::DDDDD:::::DBB:::::B     B:::::B
+ U:::::U     U:::::U    ssssssssss       eeeeeeeeeeee    rrrrr   rrrrrrrrr       ssssssssss          D:::::D    D:::::D B::::B     B:::::B
+ U:::::D     D:::::U  ss::::::::::s    ee::::::::::::ee  r::::rrr:::::::::r    ss::::::::::s         D:::::D     D:::::DB::::B     B:::::B
+ U:::::D     D:::::Uss:::::::::::::s  e::::::eeeee:::::eer:::::::::::::::::r ss:::::::::::::s        D:::::D     D:::::DB::::BBBBBB:::::B
+ U:::::D     D:::::Us::::::ssss:::::se::::::e     e:::::err::::::rrrrr::::::rs::::::ssss:::::s       D:::::D     D:::::DB:::::::::::::BB
+ U:::::D     D:::::U s:::::s  ssssss e:::::::eeeee::::::e r:::::r     r:::::r s:::::s  ssssss        D:::::D     D:::::DB::::BBBBBB:::::B
+ U:::::D     D:::::U   s::::::s      e:::::::::::::::::e  r:::::r     rrrrrrr   s::::::s             D:::::D     D:::::DB::::B     B:::::B
+ U:::::D     D:::::U      s::::::s   e::::::eeeeeeeeeee   r:::::r                  s::::::s          D:::::D     D:::::DB::::B     B:::::B
+ U::::::U   U::::::Ussssss   s:::::s e:::::::e            r:::::r            ssssss   s:::::s        D:::::D    D:::::D B::::B     B:::::B
+ U:::::::UUU:::::::Us:::::ssss::::::se::::::::e           r:::::r            s:::::ssss::::::s     DDD:::::DDDDD:::::DBB:::::BBBBBB::::::B
+  UU:::::::::::::UU s::::::::::::::s  e::::::::eeeeeeee   r:::::r            s::::::::::::::s      D:::::::::::::::DD B:::::::::::::::::B
+    UU:::::::::UU    s:::::::::::ss    ee:::::::::::::e   r:::::r             s:::::::::::ss       D::::::::::::DDD   B::::::::::::::::B
+      UUUUUUUUU       sssssssssss        eeeeeeeeeeeeee   rrrrrrr              sssssssssss         DDDDDDDDDDDDD      BBBBBBBBBBBBBBBBB
+
+
