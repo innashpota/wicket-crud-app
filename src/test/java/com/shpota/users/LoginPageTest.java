@@ -1,5 +1,7 @@
 package com.shpota.users;
 
+import com.shpota.users.pages.HomePage;
+import com.shpota.users.pages.LoginPage;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.util.tester.FormTester;
 import org.apache.wicket.util.tester.WicketTester;
@@ -56,5 +58,4 @@ public class LoginPageTest {
 		tester.assertNoInfoMessage();
 		tester.assertRenderedPage(HomePage.class);
 	}
-	
 }
