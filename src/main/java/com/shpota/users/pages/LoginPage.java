@@ -24,9 +24,7 @@ public class LoginPage extends WebPage {
     }
 
     private class LoginForm extends Form<LoginForm> {
-
         private String username;
-
         private String password;
 
         public LoginForm(String id) {
