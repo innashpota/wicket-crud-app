@@ -1,1 +1,1 @@
-docker build -t users:users-db -f Dockerfile.db .
+sudo docker build -t users:users-db -f Dockerfile.db .
