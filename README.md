@@ -19,3 +19,6 @@ Simple CRUD application written with Spring boot, Apache Wicket, Spring security
 3. Build jar-archive with the application [build-application.sh](./build-application.sh).
 
 4. Run the application [start-application.sh](./start-application.sh).
+
+The application is accessable via http://localhost:8080/.
+Use **admin/admin** as _username/password_ to login.
