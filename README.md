@@ -1,8 +1,6 @@
 Users database
 =================
 
-## Web application
-
 Simple CRUD application written with Spring boot, Apache Wicket, Spring security, JDBC and PostgreSQL.
 
 ## Environment Setup
