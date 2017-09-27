@@ -5,18 +5,22 @@
     <title>Login Page</title>
 </head>
 <body>
-<h2>Login</h2>
 <form wicket:id="loginForm">
-    <div wicket:id="feedback"></div>
+    <fieldset style="display: inline-block;">
+        <legend><h3>Login user</h3></legend>
+        <div wicket:id="feedback"></div>
+        <p>
+            <label>Username:</label>
+            <input style="float: right;" type="text" wicket:id="username"/>
+        </p>
+        <p>
+            <label>Password:</label>
+            <input style="float: right;" type="password" wicket:id="password"/>
+        </p>
+    </fieldset>
     <p>
-        <label>Username:</label>
-        <input type="text" wicket:id="username"/>
+        <input type="submit" value="Login"/>
     </p>
-    <p>
-        <label>Password:</label>
-        <input type="password" wicket:id="password"/>
-    </p>
-    <input type="submit" value="Login"/>
 </form>
 </body>
 </html>

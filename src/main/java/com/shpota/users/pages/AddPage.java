@@ -5,6 +5,7 @@ import com.shpota.users.UsersService;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.RequiredTextField;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
@@ -32,6 +33,13 @@ public class AddPage extends WebPage {
             add(new RequiredTextField<String>("lastName"));
             add(new RequiredTextField<String>("firstName"));
             add(new RequiredTextField<String>("middleName"));
+            add(new Link<Void>("cancelLink") {
+
+                @Override
+                public void onClick() {
+                    setResponsePage(HomePage.class);
+                }
+            });
         }
 
         @Override

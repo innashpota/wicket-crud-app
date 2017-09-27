@@ -3,25 +3,36 @@
     <title>Home page</title>
 </head>
 <body>
-<div class="container">
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Actions</th>
-        </tr>
-        <tbody>
-        <tr wicket:id="users">
-            <td wicket:id="name"></td>
-            <td>
-                <a href wicket:id="deleteLink">Delete</a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <wicket:child/>
+<table cellspacing="0" cellpadding="1" border="1">
+    <tr>
+        <th>
+            Name<br/>
+            <form wicket:id="searchForm">
+                <div wicket:id="feedback"></div>
+                <input type="text" wicket:id="nameSearch"/>
+                <input type="submit" value="Search"/>
+            </form>
+        </th>
+        <th>Actions</th>
+    </tr>
+    <tbody>
+    <tr wicket:id="users">
+        <td wicket:id="name"></td>
+        <td>
+            <a href wicket:id="deleteLink">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<wicket:child/>
+<div>
+    <p>
     <form wicket:id="addForm">
         <input type="submit" value="Add user"/>
+        <a href wicket:id="homeLink">Home</a>
     </form>
+    </p>
 </div>
 </body>
 </html>

@@ -8,6 +8,10 @@ CREATE TABLE users(
 );
 
 INSERT INTO users (lastName, firstName, middleName) VALUES
-  ('Kovalev', 'A.', 'A.'),
-  ('Antonov', 'D.', 'I.'),
-  ('Zebrov', 'B.', 'K.');
+  ('Korolyuk', 'Volodymyr', 'Semenovych'),
+  ('Viazovska', 'Maryna', 'Sergiivna'),
+  ('Paton', 'Yevgen', 'Oskarovich'),
+  ('Drinfeld', 'Volodymyr', 'Gershonovich'),
+  ('Tymoshenko', 'Stepan', 'Prokopovych'),
+  ('Paton', 'Borys', 'Yevhenovych'),
+  ('Horbulin', 'Volodymyr', 'Pavlovych');
