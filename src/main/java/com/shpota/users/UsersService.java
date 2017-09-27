@@ -8,13 +8,16 @@ import java.util.Collection;
 
 @Service
 public class UsersService {
+    private static final String SQL_SELECT_ALL_USERS = "SELECT * FROM users;";
+    private static final String SQL_INSERT_USER =
+            "INSERT INTO users (lastName, firstName, middleName) VALUES (?, ?, ?);";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     public Collection<User> getUsers() {
-        Collection<User> users = jdbcTemplate.query(
-                "SELECT * FROM users",
+        return jdbcTemplate.query(
+                SQL_SELECT_ALL_USERS,
                 (rs, rowNum) -> new User(
                         rs.getInt("id"),
                         rs.getString("lastName"),
@@ -22,6 +25,11 @@ public class UsersService {
                         rs.getString("middleName")
                 )
         );
-        return users;
+    }
+
+    public void createUser(User user) {
+        jdbcTemplate.update(
+                SQL_INSERT_USER,
+                user.getLastName(), user.getFirstName(), user.getMiddleName());
     }
 }
