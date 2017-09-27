@@ -7,7 +7,7 @@ Simple CRUD application written with Spring boot, Apache Wicket, Spring security
 
 ## Environment Setup
 
-- JDK 1.8 or above;
+- JDK 1.8;
 - Maven 4.0.0 or above;
 - Docker 17.05.0.
 
