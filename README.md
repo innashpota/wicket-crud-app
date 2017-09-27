@@ -1,22 +1,23 @@
-User database
+Users database
 =================
 
-##Web application
+## Web application
+
+Simple CRUD application written with Spring boot, Apache Wicket, Spring security, JDBC and PostgreSQL.
+
+## Environment Setup
+
+- JDK 1.8;
+- Maven 4.0.0 or above;
+- Docker 17.05.0.
+
 
 ## How to run
 
-For running ``docker`` command in UNIX / Linux operating system you may need ``sudo``.
+1. Build docker image for database [build-db-image.sh](./build-db-image.sh).
 
-Perform the next commands from the root folder of the project step by step:
-
-1. Build docker image for database 
+2. Run the database [start-db.sh](./start-db.sh).
     
-    ```
-    docker build -t users:users-db -f Dockerfile.db .
-    ```
+3. Build jar-archive with the application [build-application.sh](./build-application.sh).
 
-2. Run the database 
-
-    ```
-    docker run -p 5432:5432 -e POSTGRES_USER=users -e POSTGRES_PASSWORD=users -e POSTGRES_DB=users --name users_db users:users-db
-    ```
+4. Run the application [start-application.sh](./start-application.sh).
