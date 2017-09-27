@@ -11,6 +11,8 @@ public class UsersService {
     private static final String SQL_SELECT_ALL_USERS = "SELECT * FROM users;";
     private static final String SQL_INSERT_USER =
             "INSERT INTO users (lastName, firstName, middleName) VALUES (?, ?, ?);";
+    private static final String SQL_DELETE_USER =
+            "DELETE FROM users WHERE id = ?;";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -30,6 +32,11 @@ public class UsersService {
     public void createUser(User user) {
         jdbcTemplate.update(
                 SQL_INSERT_USER,
-                user.getLastName(), user.getFirstName(), user.getMiddleName());
+                user.getLastName(), user.getFirstName(), user.getMiddleName()
+        );
+    }
+
+    public void deleteUser(int id) {
+        jdbcTemplate.update(SQL_DELETE_USER, id);
     }
 }

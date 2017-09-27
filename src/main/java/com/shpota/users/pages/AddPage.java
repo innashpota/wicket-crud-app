@@ -25,7 +25,7 @@ public class AddPage extends WebPage {
         private String firstName;
         private String middleName;
 
-        public SaveForm(String id) {
+        SaveForm(String id) {
             super(id);
             setModel(new CompoundPropertyModel<>(this));
             add(new FeedbackPanel("feedback"));
