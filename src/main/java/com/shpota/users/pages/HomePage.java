@@ -33,25 +33,32 @@ public class HomePage extends WebPage {
         return new ListView<User>("users", users) {
             public void populateItem(final ListItem<User> item) {
                 final User user = item.getModelObject();
-                item.add(new Label("id", user.getId()));
-                item.add(new Label(
-                                "name",
-                                user.getLastName() + " " + user.getFirstName() + " " + user.getMiddleName()
-                        )
+                item.add(nameLabel(user));
+                item.add(deleteLink(item));
+            }
+
+            private Label nameLabel(User user) {
+                return new Label(
+                        "name",
+                        user.getLastName() + " " + user.getFirstName() + " " + user.getMiddleName()
                 );
-                item.add(new Link<Void>("deleteLocationLink") {
+            }
+
+            private Link<Void> deleteLink(ListItem<User> item) {
+                return new Link<Void>("deleteLink") {
                     @Override
                     public void onClick() {
-                        service.deleteUser(item.getModelObject().getId());
+                        int userId = item.getModelObject().getId();
+                        service.deleteUser(userId);
                         setResponsePage(HomePage.class);
                     }
-                });
+                };
             }
         };
     }
 
     private class AddForm extends Form<AddForm> {
-        public AddForm(String id) {
+        AddForm(String id) {
             super(id);
         }
 
