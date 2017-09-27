@@ -1,4 +1,4 @@
-User database
+Users database
 =================
 
 ##Web application

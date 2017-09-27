@@ -1,0 +1,1 @@
+java -jar target/users-1.0.jar
