@@ -1,21 +1,29 @@
 <html xmlns:wicket="http://wicket.apache.org">
 <head>
-    <title>UsersTable</title>
+    <title>Home page</title>
 </head>
 <body>
-<table>
-    <tr>
-        <th>Last name</th>
-        <th>First name</th>
-        <th>Middle name</th>
-    </tr>
-    <tbody>
-    <tr wicket:id="users">
-        <td wicket:id="lastName"></td>
-        <td wicket:id="firstName"></td>
-        <td wicket:id="middleName"></td>
-    </tr>
-    </tbody>
-</table>
+<div class="container">
+    <table>
+        <tr>
+            <th>Last name</th>
+            <th>First name</th>
+            <th>Middle name</th>
+        </tr>
+        <tbody>
+        <tr wicket:id="users">
+            <td wicket:id="lastName"></td>
+            <td wicket:id="firstName"></td>
+            <td wicket:id="middleName"></td>
+            <td><input type="submit" wicket:id="deleteButton" value="Delete"/></td>
+            <td><input type="submit" wicket:id="editButton" value="Edit"/></td>
+        </tr>
+        </tbody>
+    </table>
+    <wicket:child/>
+    <form wicket:id="addForm">
+        <input type="submit" value="Add user"/>
+    </form>
+</div>
 </body>
 </html>
