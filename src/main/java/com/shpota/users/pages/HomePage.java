@@ -36,18 +36,6 @@ public class HomePage extends WebPage {
                 item.add(new Label("lastName", user.getLastName()));
                 item.add(new Label("firstName", user.getFirstName()));
                 item.add(new Label("middleName", user.getMiddleName()));
-                item.add(new Button("deleteButton") {
-                    @Override
-                    public void onSubmit() {
-                        setResponsePage(HomePage.class);
-                    }
-                });
-                item.add(new Button("editButton") {
-                    @Override
-                    public void onSubmit() {
-                        setResponsePage(HomePage.class);
-                    }
-                });
             }
         };
     }
