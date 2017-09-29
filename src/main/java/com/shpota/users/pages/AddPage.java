@@ -34,7 +34,6 @@ public class AddPage extends WebPage {
             add(new RequiredTextField<String>("firstName"));
             add(new RequiredTextField<String>("middleName"));
             add(new Link<Void>("cancelLink") {
-
                 @Override
                 public void onClick() {
                     setResponsePage(HomePage.class);
