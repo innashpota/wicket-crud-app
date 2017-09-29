@@ -17,6 +17,10 @@ public class UsersService {
     private static final String SQL_SELECT_USERS_BY_NAME =
             "SELECT * FROM users WHERE UPPER(last_name) LIKE UPPER(?) OR UPPER(first_name) " +
                     "LIKE UPPER(?) OR UPPER(middle_name) LIKE UPPER(?);";
+    private static final String SQL_SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
+    private static final String SQL_UPDATE_USER =
+            "UPDATE users " +
+                    "SET last_name = ?, first_name = ?, middle_name = ? WHERE id = ?;";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -44,6 +48,18 @@ public class UsersService {
                 SQL_SELECT_USERS_BY_NAME,
                 new Object[]{name + "%", name + "%", name + "%"},
                 userRowMapper()
+        );
+    }
+
+    public User getUserById(int id) {
+        List<User> userList = jdbcTemplate.query(SQL_SELECT_USER_BY_ID, new Object[]{id}, userRowMapper());
+        return userList.get(0);
+    }
+
+    public void updateUser(int id, User user) {
+        jdbcTemplate.update(
+                SQL_UPDATE_USER,
+                user.getLastName(), user.getFirstName(), user.getMiddleName(), id
         );
     }
 

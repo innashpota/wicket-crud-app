@@ -46,6 +46,7 @@ public class HomePage extends WebPage {
                 final User user = item.getModelObject();
                 item.add(nameLabel(user));
                 item.add(deleteLink(item));
+                item.add(editLink(item));
             }
 
             private Label nameLabel(User user) {
@@ -62,6 +63,18 @@ public class HomePage extends WebPage {
                         int userId = item.getModelObject().getId();
                         service.deleteUser(userId);
                         setResponsePage(HomePage.class);
+                    }
+                };
+            }
+
+            private Link<Void> editLink(ListItem<User> item) {
+                return new Link<Void>("editLink") {
+                    @Override
+                    public void onClick() {
+                        int userId = item.getModelObject().getId();
+                        PageParameters parameters = new PageParameters();
+                        parameters.add("id", userId);
+                        setResponsePage(EditPage.class, parameters);
                     }
                 };
             }

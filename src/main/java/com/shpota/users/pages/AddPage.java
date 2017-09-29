@@ -16,7 +16,7 @@ public class AddPage extends WebPage {
     @SpringBean
     private UsersService service;
 
-    public AddPage(final PageParameters parameters) {
+    public AddPage(PageParameters parameters) {
         super(parameters);
         add(new SaveForm("saveForm"));
     }
