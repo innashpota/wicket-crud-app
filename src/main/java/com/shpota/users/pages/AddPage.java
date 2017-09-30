@@ -16,7 +16,7 @@ public class AddPage extends WebPage {
     @SpringBean
     private UsersService service;
 
-    public AddPage(final PageParameters parameters) {
+    public AddPage(PageParameters parameters) {
         super(parameters);
         add(new SaveForm("saveForm"));
     }
@@ -34,7 +34,6 @@ public class AddPage extends WebPage {
             add(new RequiredTextField<String>("firstName"));
             add(new RequiredTextField<String>("middleName"));
             add(new Link<Void>("cancelLink") {
-
                 @Override
                 public void onClick() {
                     setResponsePage(HomePage.class);

@@ -2,12 +2,12 @@ DROP TABLE IF EXISTS users;
 
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
-    lastName VARCHAR(255) NOT NULL,
-    firstName VARCHAR(255) NOT NULL,
-    middleName VARCHAR(255) NOT NULL
+    last_name VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    middle_name VARCHAR(255) NOT NULL
 );
 
-INSERT INTO users (lastName, firstName, middleName) VALUES
+INSERT INTO users (last_name, first_name, middle_name) VALUES
   ('Korolyuk', 'Volodymyr', 'Semenovych'),
   ('Viazovska', 'Maryna', 'Sergiivna'),
   ('Paton', 'Yevgen', 'Oskarovich'),

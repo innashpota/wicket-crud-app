@@ -6,13 +6,9 @@ import com.shpota.users.UsersService;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.RequiredTextField;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
-import org.apache.wicket.markup.html.panel.FeedbackPanel;
-import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.apache.wicket.util.string.StringValue;
@@ -50,6 +46,7 @@ public class HomePage extends WebPage {
                 final User user = item.getModelObject();
                 item.add(nameLabel(user));
                 item.add(deleteLink(item));
+                item.add(editLink(item));
             }
 
             private Label nameLabel(User user) {
@@ -69,42 +66,18 @@ public class HomePage extends WebPage {
                     }
                 };
             }
+
+            private Link<Void> editLink(ListItem<User> item) {
+                return new Link<Void>("editLink") {
+                    @Override
+                    public void onClick() {
+                        int userId = item.getModelObject().getId();
+                        PageParameters parameters = new PageParameters();
+                        parameters.add("id", userId);
+                        setResponsePage(EditPage.class, parameters);
+                    }
+                };
+            }
         };
-    }
-
-    private class SearchForm extends Form<SearchForm> {
-        private String nameSearch;
-
-        SearchForm(String id) {
-            super(id);
-            setModel(new CompoundPropertyModel<>(this));
-            add(new FeedbackPanel("feedback"));
-            add(new RequiredTextField<String>("nameSearch"));
-        }
-
-        @Override
-        protected void onSubmit() {
-            PageParameters parameters = new PageParameters();
-            parameters.add("nameSearch", nameSearch);
-            setResponsePage(HomePage.class, parameters);
-        }
-    }
-
-    private class AddForm extends Form<AddForm> {
-        AddForm(String id) {
-            super(id);
-            add(new Link<Void>("homeLink") {
-
-                @Override
-                public void onClick() {
-                    setResponsePage(HomePage.class);
-                }
-            });
-        }
-
-        @Override
-        protected void onSubmit() {
-            setResponsePage(AddPage.class);
-        }
     }
 }
