@@ -2,6 +2,7 @@ package com.shpota.users.pages.forms;
 
 import com.shpota.users.domain.User;
 import com.shpota.users.pages.HomePage;
+import com.shpota.users.pages.links.HomeLink;
 import com.shpota.users.service.UsersService;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.FormComponent;
@@ -38,12 +39,7 @@ public class EditForm extends Form<EditForm> {
         add(lastName);
         add(firstName);
         add(middleName);
-        add(new Link<Void>("cancelLink") {
-            @Override
-            public void onClick() {
-                setResponsePage(HomePage.class);
-            }
-        });
+        add(new HomeLink("cancelLink"));
     }
 
     @Override
