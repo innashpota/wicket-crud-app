@@ -1,4 +1,4 @@
-package com.shpota.users;
+package com.shpota.users.domain;
 
 import org.springframework.util.Assert;
 

@@ -1,8 +1,10 @@
 package com.shpota.users.pages;
 
 import com.giffing.wicket.spring.boot.context.scan.WicketHomePage;
-import com.shpota.users.User;
-import com.shpota.users.UsersService;
+import com.shpota.users.domain.User;
+import com.shpota.users.pages.forms.AddForm;
+import com.shpota.users.pages.forms.SearchForm;
+import com.shpota.users.service.UsersService;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;

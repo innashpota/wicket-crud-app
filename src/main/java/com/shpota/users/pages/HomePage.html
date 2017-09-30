@@ -9,7 +9,7 @@
             Name<br/>
             <form wicket:id="searchForm">
                 <div wicket:id="feedback"></div>
-                <input type="text" wicket:id="nameSearch"/>
+                <input type="text" wicket:id="nameSearch" required/>
                 <input type="submit" value="Search"/>
             </form>
         </th>
@@ -20,9 +20,9 @@
         <td wicket:id="name"></td>
         <td>
             &nbsp;
-            <a href wicket:id="deleteLink">Delete</a>
-            &nbsp;
             <a href wicket:id="editLink">Edit</a>
+            &nbsp;
+            <a href wicket:id="deleteLink">Delete</a>
             &nbsp;
         </td>
     </tr>
