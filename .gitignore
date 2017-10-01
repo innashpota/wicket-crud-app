@@ -1,5 +1,8 @@
 /target/
+/out/
 /users.iml
+/src/main/main.iml
+/src/test/test.iml
 
 .classpath
 .project
